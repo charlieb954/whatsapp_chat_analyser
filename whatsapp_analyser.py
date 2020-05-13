@@ -6,6 +6,9 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import matplotlib.pyplot as plt
 
+# pip install -r requirements.txt 
+# run above from the command line
+
 class WhatsAppAnalyser:
     '''Works with the .txt file export from WhatsApp (no media) to provide summary statistics in the form of graphs and tables.
     Steps to use the WhatsAppAnalyser:
@@ -78,8 +81,7 @@ class WhatsAppAnalyser:
     def message_counter(self, user, msg_list):
         '''returns 
         i = number of messages sent by user
-        total_len_messages = total number of words sent over all messages
-        '''
+        total_len_messages = total number of words sent over all messages'''
         i = 0
         total_len_messages = 0
         for msg_grp in msg_list:
@@ -146,9 +148,9 @@ class WhatsAppAnalyser:
         Number of Messages VS Hour of Day'''
         fig = make_subplots(rows=3, 
                             cols=1, 
-                            subplot_titles = ['Number of Messages VS Day of Week', 
-                                            'Number of First Contacts VS User',
-                                            'Number of Messages VS Hour of Day'])
+                            subplot_titles = ['Number of First Contacts VS User',
+                                              'Number of Messages VS Day of Week', 
+                                              'Number of Messages VS Hour of Day'])
 
         fig.add_trace(go.Bar(
                     name='Msg VS Day',
@@ -196,7 +198,7 @@ class WhatsAppAnalyser:
                         marker_line_width=1.5, 
                         opacity=0.6)
 
-        fig.update_layout( title_text="<b>WhatsApp Analysis",
+        fig.update_layout(title_text="<b>WhatsApp Analysis",
                         height=1000, 
                         width=1000,
                         showlegend = False)

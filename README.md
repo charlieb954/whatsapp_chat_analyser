@@ -17,3 +17,8 @@ Total words sent by user
 Average length of message by user
 First contact count by user
 Total messages sent by day of the week
+
+Example results:
+![](images/result_graphs.png)
+
+![](images/result_table.png)
